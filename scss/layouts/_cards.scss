@@ -1,0 +1,96 @@
+// Cards
+.cards {
+  &__list {
+    list-style-position: inside;
+  }
+  .card {
+    border-radius: 8px;
+    padding: 2rem;
+    max-width: 445px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__offer {
+    display: flex;
+    align-items: center;
+    font-size: $fs-500;
+    padding-top: 1.6rem;
+    padding-bottom: 1.2rem;
+    font-weight: 800;
+    span {
+      font-size: $fs-body;
+      opacity: 0.6;
+      font-weight: 400;
+      margin-left: 0.5rem;
+    }
+  }
+
+  margin-top: clamp(3.5rem, 10vw, 4.5rem);
+}
+
+// Cards Typograph
+.cards {
+  h3 {
+    padding-top: 1.8rem;
+    padding-bottom: 1.18rem;
+  }
+  &__des {
+    opacity: 0.6;
+  }
+}
+
+// Cards One
+.cards {
+  &__one {
+    * {
+      color: $clr-white;
+    }
+
+    & {
+      position: relative;
+      background-color: $clr_blue-dark;
+      margin-bottom: 4rem;
+    }
+
+    &__list {
+      @include check-color(white);
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      background: url(../../starter-code/assets/icon-free.svg);
+      height: 46px;
+      width: 46px;
+      top: -23px;
+    }
+  }
+}
+
+// Cards Two
+.cards {
+  &__two {
+    * {
+      color: $clr-very-dark;
+    }
+
+    & {
+      position: relative;
+      background-color: $clr-cyan;
+    }
+
+    &__list {
+      @include check-color(black);
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      background: url(../../starter-code/assets/icon-paid.svg);
+      height: 65px;
+      width: 51px;
+      top: -33px;
+    }
+  }
+}

@@ -1,0 +1,37 @@
+.form {
+  &__email {
+    width: 100%;
+    @include for-tablet {
+      width: 327px;
+    }
+    background-color: $clr_blue-dark;
+    text-indent: 18px;
+    margin-bottom: 1rem;
+    &::placeholder {
+      color: $clr-white;
+      opacity: 0.4;
+    }
+  }
+
+  &__submit {
+    @include for-phone {
+      width: 100%;
+    }
+    width: 140px;
+    background-color: $clr-cyan;
+    cursor: pointer;
+    color: $clr_blue-dark;
+  }
+
+  &__email,
+  &__submit {
+    font-weight: $fw-800;
+    border: none;
+    border-radius: 24px;
+    height: 3rem;
+  }
+
+  .hidden {
+    display: none;
+  }
+}

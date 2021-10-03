@@ -1,0 +1,23 @@
+// Media Query
+@mixin for-phone {
+  @media only screen and (max-width: $phone) {
+    @content;
+  }
+}
+
+@mixin for-tablet {
+  @media only screen and(min-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin for-desktop {
+  @media only screen and (min-width: $desktop) {
+    @content;
+  }
+}
+
+// Colors Check
+@mixin check-color($color) {
+  list-style-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="9"><path fill="#{$color}" d="M10.319.768l1.363 1.464-7.128 6.634L.319 4.924 1.682 3.46l2.871 2.674z"/></svg>');
+}

@@ -1,0 +1,9 @@
+header {
+  padding-top: clamp(2.5rem, 2vw, 5rem);
+  margin-bottom: clamp(4rem, 10vw, 9rem);
+  text-align: center;
+
+  @include for-tablet {
+    text-align: start;
+  }
+}

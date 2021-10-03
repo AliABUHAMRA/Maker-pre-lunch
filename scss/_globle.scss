@@ -1,0 +1,45 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: $ff-manrope, $sans-serif;
+  font-size: $fs-body;
+  min-height: 100vh;
+  line-height: 1.6;
+  background: $clr-very-dark no-repeat;
+  margin-bottom: 3rem;
+}
+
+.warpper {
+  max-width: 1110px; // 20px smaller, to fit the paddings on the sides
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.container-fluid {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 24px;
+  padding-left: 24px;
+  /* for edge cases: */
+  width: 100%;
+  max-width: 1110px;
+}
+
+img {
+  max-width: 100%;
+}

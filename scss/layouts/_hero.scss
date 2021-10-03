@@ -1,0 +1,64 @@
+// Hero Section
+.hero {
+  text-align: center;
+  @include for-tablet {
+    min-height: 357px;
+  }
+
+  &__content {
+    @include for-tablet {
+      background: url(../../starter-code/assets/bg-hero-squiggle.svg) no-repeat;
+      background-size: contain;
+      background-position: center 30%;
+      width: clamp(28.5rem, 40vw, 47rem);
+      margin-left: auto;
+      margin-right: auto;
+      min-height: 318px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+    }
+  }
+
+  &__descripe {
+    color: $clr-blue-loo;
+  }
+}
+
+// Hero Cover
+.hero {
+  position: relative;
+  &__cover-mobile {
+    @include for-tablet {
+      display: none;
+    }
+  }
+
+  @include for-tablet {
+    &::before {
+      content: "";
+      position: absolute;
+      //  inset: 0; shorthand top right bottom left
+      background: url(../../starter-code/assets/illustration-hero-left.svg)
+        no-repeat;
+      z-index: -1;
+      background-size: contain;
+      height: 100%;
+      width: 314px;
+      left: -170px;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      background: url(../../starter-code/assets/illustration-hero-right.svg)
+        no-repeat;
+      z-index: -1;
+      background-size: contain;
+      height: 100%;
+      width: 314px;
+      top: 0;
+      right: -170px;
+    }
+  }
+}

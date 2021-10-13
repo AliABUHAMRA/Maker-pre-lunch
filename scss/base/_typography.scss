@@ -8,7 +8,7 @@ h1 {
     color: $clr-cyan;
   }
   @include for-tablet {
-    font-size: clamp(2rem, 4vw, 3rem);
+    font-size: clamp(2rem, 3vw, 3rem);
   }
   @include for-desktop {
     line-height: 3.5rem;

@@ -376,7 +376,7 @@ h1 span {
 
 @media only screen and (min-width: 768px) {
   h1 {
-    font-size: clamp(2rem, 4vw, 3rem);
+    font-size: clamp(2rem, 3vw, 3rem);
   }
 }
 
@@ -487,6 +487,7 @@ header {
 
 @media only screen and (min-width: 768px) {
   header {
+    padding-left: 2.5rem;
     text-align: start;
   }
 }
@@ -497,45 +498,46 @@ header {
 
 @media only screen and (min-width: 768px) {
   .hero {
-    min-height: 357px;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.hero__content {
+  overflow: hidden;
+}
+
+@media only screen and (min-width: 768px) {
+  .hero__content {
+    position: absolute;
+    top: 0;
   }
 }
 
 @media only screen and (min-width: 768px) {
   .hero__content {
-    background: url(../../starter-code/assets/bg-hero-squiggle.svg) no-repeat;
+    background: url(../assets/bg-hero-squiggle.svg) no-repeat;
     background-size: contain;
     background-position: center 30%;
-    width: clamp(28.5rem, 40vw, 47rem);
+    max-width: clamp(28.5rem, 40vw, 47rem);
     margin-left: auto;
     margin-right: auto;
-    min-height: 318px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
   }
 }
 
 .hero__descripe {
   color: #767f98;
-}
-
-.hero {
-  position: relative;
+  margin-bottom: 4rem;
 }
 
 @media only screen and (min-width: 768px) {
-  .hero__cover-mobile {
-    display: none;
+  .hero__cover img {
+    opacity: 0;
   }
 }
 
@@ -543,23 +545,30 @@ header {
   .hero::before {
     content: "";
     position: absolute;
-    background: url(../../starter-code/assets/illustration-hero-left.svg) no-repeat;
+    inset: 0;
+    background: url(../assets/illustration-hero-left.svg) no-repeat;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-position: -166px top;
     z-index: -1;
     background-size: contain;
-    height: 100%;
     width: 314px;
-    left: -170px;
   }
+}
+
+@media only screen and (min-width: 768px) {
   .hero::after {
     content: "";
     position: absolute;
-    background: url(../../starter-code/assets/illustration-hero-right.svg) no-repeat;
+    background: url(../assets/illustration-hero-right.svg) no-repeat;
+    background-position: 166px top;
+    top: 0;
+    right: 0;
+    bottom: 0;
     z-index: -1;
     background-size: contain;
-    height: 100%;
     width: 314px;
-    top: 0;
-    right: -170px;
   }
 }
 
@@ -686,7 +695,7 @@ header {
 .cards__one::before {
   content: "";
   position: absolute;
-  background: url(../../starter-code/assets/icon-free.svg);
+  background: url(../assets/icon-free.svg);
   height: 46px;
   width: 46px;
   top: -23px;
@@ -708,7 +717,7 @@ header {
 .cards__two::before {
   content: "";
   position: absolute;
-  background: url(../../starter-code/assets/icon-paid.svg);
+  background: url(../assets/icon-paid.svg);
   height: 65px;
   width: 51px;
   top: -33px;
@@ -719,7 +728,7 @@ header {
 }
 
 .sign-up-warpper h2 {
-  background: url(../../starter-code/assets/bg-footer-squiggle.svg) no-repeat;
+  background: url(../assets/bg-footer-squiggle.svg) no-repeat;
   background-size: cover;
   background-position-x: center;
   text-align: center;
@@ -741,7 +750,7 @@ html {
 }
 
 body {
-  font-family: "Manrope", sans-serif;
+  font-family: "Manrope", Arial, sans-serif;
   font-size: 0.9375rem;
   min-height: 100vh;
   line-height: 1.6;
@@ -749,25 +758,23 @@ body {
   margin-bottom: 3rem;
 }
 
-.warpper {
-  max-width: 1110px;
-  padding-left: 24px;
-  padding-right: 24px;
-}
-
-.container-fluid {
-  padding-left: 12px;
-  padding-right: 12px;
-}
-
 .container {
   margin-right: auto;
   margin-left: auto;
-  padding-right: 24px;
-  padding-left: 24px;
   /* for edge cases: */
-  width: 100%;
   max-width: 1110px;
+}
+
+@media only screen and (max-width: 767px) {
+  .container {
+    max-width: 87vw;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 75vw;
+  }
 }
 
 img {

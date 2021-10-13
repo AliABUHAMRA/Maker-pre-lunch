@@ -4,6 +4,7 @@ header {
   text-align: center;
 
   @include for-tablet {
+    padding-left: 2.5rem;
     text-align: start;
   }
 }

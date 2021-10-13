@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  font-family: $ff-manrope, $sans-serif;
+  font-family: $ff-manrope, Arial, $sans-serif;
   font-size: $fs-body;
   min-height: 100vh;
   line-height: 1.6;
@@ -19,24 +19,22 @@ body {
   margin-bottom: 3rem;
 }
 
-.warpper {
-  max-width: 1110px; // 20px smaller, to fit the paddings on the sides
-  padding-left: 24px;
-  padding-right: 24px;
-}
-
-.container-fluid {
-  padding-left: 12px;
-  padding-right: 12px;
-}
+// .warpper {
+//   max-width: 1110px; // 20px smaller, to fit the paddings on the sides
+//   padding-left: 24px;
+//   padding-right: 24px;
+// }
 
 .container {
   margin-right: auto;
   margin-left: auto;
-  padding-right: 24px;
-  padding-left: 24px;
   /* for edge cases: */
-  width: 100%;
+  @include for-phone {
+    max-width: 87vw;
+  }
+  @include for-tablet {
+    max-width: 75vw;
+  }
   max-width: 1110px;
 }
 

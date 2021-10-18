@@ -1,7 +1,7 @@
 # Frontend Mentor - Maker pre-launch landing page
 
-![github repo size](https://img.shields.io/github/repo-size/AliBearr/intro-component-sign-up-form)
-![github contributors](https://img.shields.io/github/contributors/AliBearr/intro-component-sign-up-form)
+![github repo size](https://img.shields.io/github/repo-size/alibearr/Maker-pre-lunch)
+![github contributors](https://img.shields.io/github/contributors/AliBearr/Maker-pre-lunch)
 ![github twiter](https://img.shields.io/twitter/follow/Alibearrr?style=social)
 
 <!-- ![podcast preview](./design/desktop-preview.jpg) -->

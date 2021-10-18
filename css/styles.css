@@ -410,73 +410,6 @@ h1 {
 /* Additonal Base Stylesheets */
 /*
 This file is used to contain all component imports.
-Files inside this folder should contain all styles relating to a reusable component.
-*/
-.form__email {
-  width: 100%;
-  background-color: #093e67;
-  text-indent: 18px;
-  margin-bottom: 1rem;
-}
-
-@media only screen and (min-width: 768px) {
-  .form__email {
-    width: 327px;
-  }
-}
-
-.form__email::-webkit-input-placeholder {
-  color: #fff;
-  opacity: 0.4;
-}
-
-.form__email:-ms-input-placeholder {
-  color: #fff;
-  opacity: 0.4;
-}
-
-.form__email::-ms-input-placeholder {
-  color: #fff;
-  opacity: 0.4;
-}
-
-.form__email::placeholder {
-  color: #fff;
-  opacity: 0.4;
-}
-
-.form__submit {
-  width: 140px;
-  background-color: #3eeae7;
-  cursor: pointer;
-  color: #093e67;
-}
-
-@media only screen and (max-width: 767px) {
-  .form__submit {
-    width: 100%;
-  }
-}
-
-.form__email, .form__submit {
-  font-weight: 800;
-  border: none;
-  border-radius: 24px;
-  height: 3rem;
-}
-
-.form .hidden {
-  display: none;
-}
-
-.icon-scroll {
-  cursor: pointer;
-  width: 26px;
-}
-
-/* Additonal Component Stylesheets */
-/*
-This file is used to contain all component imports.
 Files inside this folder can contain specific element styles and layout. 
 */
 header {
@@ -591,6 +524,16 @@ header {
   }
 }
 
+@media only screen and (min-width: 1200px) {
+  .categories__list {
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    -ms-grid-rows: minmax(auto, 383px);
+        grid-template-rows: minmax(auto, 383px);
+    gap: 30px;
+  }
+}
+
 .categories__list li p {
   font-size: 0.9375rem;
 }
@@ -616,13 +559,42 @@ header {
   }
 }
 
+@media only screen and (min-width: 768px) and (min-width: 1200px) {
+  .categories__list li {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .categories__list li:nth-of-type(2) {
+    -ms-flex-item-align: end;
+        -ms-grid-row-align: end;
+        align-self: end;
+  }
+  .categories__list li:nth-of-type(4) {
+    -ms-flex-item-align: end;
+        -ms-grid-row-align: end;
+        align-self: end;
+  }
+}
+
 .categories__list li img {
   background-color: #093e67;
   border-radius: 50px;
   height: 124px;
   width: 120px;
-  padding: 19px 24px;
+  padding: 29px 34px;
   max-width: 100%;
+}
+
+@media only screen and (min-width: 1200px) {
+  .categories__list li img {
+    height: 164px;
+    width: 164px;
+  }
 }
 
 .pricing-warpper {
@@ -637,6 +609,33 @@ header {
   margin-top: clamp(3.5rem, 10vw, 4.5rem);
 }
 
+.cards__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 4rem;
+  min-height: 482px;
+}
+
+@media only screen and (min-width: 1200px) {
+  .cards__wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .cards__list {
   list-style-position: inside;
 }
@@ -645,8 +644,6 @@ header {
   border-radius: 8px;
   padding: 2rem;
   max-width: 445px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .cards__offer {
@@ -685,7 +682,6 @@ header {
 .cards__one {
   position: relative;
   background-color: #093e67;
-  margin-bottom: 4rem;
 }
 
 .cards__one__list {
@@ -723,16 +719,126 @@ header {
   top: -33px;
 }
 
-.sign-up-warpper {
-  margin-top: 120px;
+@media only screen and (min-width: 1200px) {
+  .cards__two {
+    -ms-flex-item-align: stretch;
+        -ms-grid-row-align: stretch;
+        align-self: stretch;
+  }
 }
 
-.sign-up-warpper h2 {
+.form-warpper {
   background: url(../assets/bg-footer-squiggle.svg) no-repeat;
-  background-size: cover;
-  background-position-x: center;
+  background-size: contain;
+  margin-top: 120px;
+  padding: 2rem 0;
+}
+
+.form-warpper h2 {
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+
+.form__email {
+  width: 100%;
+  color: #fff;
+  background-color: #093e67;
+  text-indent: 18px;
+}
+
+@media only screen and (min-width: 768px) {
+  .form__email {
+    width: 327px;
+  }
+}
+
+.form__email::-webkit-input-placeholder {
+  color: #fff;
+  opacity: 0.4;
+}
+
+.form__email:-ms-input-placeholder {
+  color: #fff;
+  opacity: 0.4;
+}
+
+.form__email::-ms-input-placeholder {
+  color: #fff;
+  opacity: 0.4;
+}
+
+.form__email::placeholder {
+  color: #fff;
+  opacity: 0.4;
+}
+
+.form__submit {
+  width: 140px;
+  background-color: #3eeae7;
+  cursor: pointer;
+  color: #093e67;
+}
+
+.form__submit:hover {
+  background: #080c21;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+@media only screen and (max-width: 767px) {
+  .form__submit {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .form__submit {
+    margin-left: 1rem;
+  }
+}
+
+.form__email, .form__submit {
+  font-weight: 800;
+  border: none;
+  border-radius: 24px;
+  height: 3rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.label-input {
+  max-width: 320px;
+}
+
+.label-input .msg-err {
+  display: block;
+  color: #ff2965;
+  padding: 0.2rem 0;
+  text-align: start;
+  text-indent: 18px;
+  font-weight: 200;
+  height: 35px;
+}
+
+.my-link {
+  font-weight: 400;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.my-link a:hover {
+  color: #fff;
+  -webkit-box-shadow: 2px 4px 9px 3px;
+          box-shadow: 2px 4px 9px 3px;
 }
 
 *,
@@ -762,7 +868,6 @@ body {
   margin-right: auto;
   margin-left: auto;
   /* for edge cases: */
-  max-width: 1110px;
 }
 
 @media only screen and (max-width: 767px) {
@@ -774,6 +879,12 @@ body {
 @media only screen and (min-width: 768px) {
   .container {
     max-width: 75vw;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .container {
+    max-width: 1110px;
   }
 }
 

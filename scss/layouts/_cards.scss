@@ -1,5 +1,17 @@
 // Cards
 .cards {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+    min-height: 482px;
+    @include for-desktop {
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+
   &__list {
     list-style-position: inside;
   }
@@ -7,8 +19,6 @@
     border-radius: 8px;
     padding: 2rem;
     max-width: 445px;
-    margin-left: auto;
-    margin-right: auto;
   }
 
   &__offer {
@@ -50,7 +60,6 @@
     & {
       position: relative;
       background-color: $clr_blue-dark;
-      margin-bottom: 4rem;
     }
 
     &__list {
@@ -91,6 +100,9 @@
       height: 65px;
       width: 51px;
       top: -33px;
+    }
+    @include for-desktop {
+      align-self: stretch;
     }
   }
 }

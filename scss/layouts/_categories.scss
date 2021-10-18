@@ -8,6 +8,11 @@
     @include for-phone {
       text-align: center;
     }
+    @include for-desktop {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: minmax(auto, 383px);
+      gap: 30px;
+    }
 
     li {
       p {
@@ -32,6 +37,16 @@
         &:nth-of-type(3) {
           justify-self: end;
         }
+        @include for-desktop {
+          flex-direction: column;
+          align-items: flex-start;
+          &:nth-of-type(2) {
+            align-self: end;
+          }
+          &:nth-of-type(4) {
+            align-self: end;
+          }
+        }
       }
     }
   }
@@ -47,8 +62,12 @@
         border-radius: 50px;
         height: 124px;
         width: 120px;
-        padding: 19px 24px;
+        padding: 29px 34px;
         max-width: 100%;
+        @include for-desktop {
+          height: 164px;
+          width: 164px;
+        }
       }
     }
   }

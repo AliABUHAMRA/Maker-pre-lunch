@@ -1,0 +1,84 @@
+// Form Warpper
+.form-warpper {
+  background: url(../assets/bg-footer-squiggle.svg) no-repeat;
+  background-size: contain;
+  margin-top: 120px;
+  padding: 2rem 0;
+  h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+}
+
+// Form
+.form {
+  &__email {
+    width: 100%;
+    color: $clr-white;
+    @include for-tablet {
+      width: 327px;
+    }
+    background-color: $clr_blue-dark;
+    text-indent: 18px;
+    &::placeholder {
+      color: $clr-white;
+      opacity: 0.4;
+    }
+  }
+
+  &__submit {
+    width: 140px;
+    background-color: $clr-cyan;
+    cursor: pointer;
+    color: $clr_blue-dark;
+    &:hover {
+      background: $clr-very-dark;
+      color: $clr-white;
+      border: 1px solid $clr-white;
+    }
+    @include for-phone {
+      width: 100%;
+    }
+    @include for-tablet {
+      margin-left: 1rem;
+    }
+  }
+
+  &__email,
+  &__submit {
+    font-weight: $fw-800;
+    border: none;
+    border-radius: 24px;
+    height: 3rem;
+  }
+  @include for-tablet {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+// label input
+.label-input {
+  max-width: 320px;
+  .msg-err {
+    display: block;
+    color: $clr-red;
+    padding: 0.2rem 0;
+    text-align: start;
+    text-indent: 18px;
+    font-weight: $fw-200;
+    height: 35px;
+  }
+}
+
+.my-link {
+  font-weight: 400;
+  padding: 1rem 0;
+  text-align: center;
+  a {
+    &:hover {
+      color: #fff;
+      box-shadow: 2px 4px 9px 3px;
+    }
+  }
+}

@@ -35,7 +35,9 @@ body {
   @include for-tablet {
     max-width: 75vw;
   }
-  max-width: 1110px;
+  @include for-desktop {
+    max-width: 1110px;
+  }
 }
 
 img {
